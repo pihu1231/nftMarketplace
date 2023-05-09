@@ -34,12 +34,7 @@ const Home = () => {
   const [nfts, setNfts] = useState([]);
   const [nftsCopy, setNftsCopy] = useState([]);
 
-  useEffect(() => {
-    fetchNFTs().then((items) => {
-      setNfts(items.reverse());
-      setNftsCopy(items);
-    });
-  }, []);
+  newFunction();
 
   //CREATOR LIST
   const creators = getTopCreators(nfts);
@@ -80,6 +75,15 @@ const Home = () => {
       <Video />
     </div>
   );
+
+  function newFunction() {
+    useEffect( () => {
+      fetchNFTs().then( ( items ) => {
+        // setNfts( items.reverse() );
+        setNftsCopy( items );
+      } );
+    }, [] );
+  }
 };
 
 export default Home;

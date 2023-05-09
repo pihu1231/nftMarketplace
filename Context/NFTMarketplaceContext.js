@@ -25,7 +25,8 @@ const client = ipfsHttpClient({
 });
 
 //INTERNAL  IMPORT
-import { NFTMarketplaceAddress, NFTMarketplaceABI } from "./constants";
+
+import { NFTMarketplaceAddress, NFTMarketplaceABI } from "./constants"
 
 //---FETCHING SMART CONTRACT
 const fetchContract = (signerOrProvider) =>

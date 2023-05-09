@@ -258,8 +258,9 @@ const NFTDescription = ({ nft }) => {
               <span>[96 in stock]</span>
             </div>
 
-            <div className={Style.NFTDescription_box_profile_biding_box_button}>
-              {currentAccount == nft.seller.toLowerCase() ? (
+            {/* <div className={Style.NFTDescription_box_profile_biding_box_button}>
+              {
+              currentAccount == nft.seller.toLowerCase() ? (
                 <p>You can't buy your own NFT</p>
               ) : currentAccount == nft.owner.toLowerCase() ? (
                 <Button
@@ -272,6 +273,7 @@ const NFTDescription = ({ nft }) => {
                   }
                   classStyle={Style.button}
                 />
+              
               ) : (
                 <Button
                   icon=<FaWallet />
@@ -287,7 +289,8 @@ const NFTDescription = ({ nft }) => {
                 handleClick={() => {}}
                 classStyle={Style.button}
               />
-            </div>
+            
+            </div> */}
 
             <div className={Style.NFTDescription_box_profile_biding_box_tabs}>
               <button onClick={(e) => openTabs(e)}>Bid History</button>
@@ -314,8 +317,10 @@ const NFTDescription = ({ nft }) => {
           </div>
         </div>
       </div>
+    
     </div>
-  );
-};
+   
+ );
 
+            };
 export default NFTDescription;
